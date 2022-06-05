@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Golden Flour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  
+  <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+
+        header {
+          height: 65px;
+          width: 100%;
+          background-color: rgba(34, 49, 52, 0.7);
+          position :fixed;
+          top: 0;
+          z-index: 10;
+        }
+
+        .fa-cake-candles {
+          color: #ffffff;
+          padding: 0 10px;
+        }
+
+        .header-left {
+          float: left;
+          line-height: 65px;
+          font-size: 25px;
+          font-weight: bolder;
+          padding-left: 10px;
+          color: #ffd700;
+        }
+
+        .header-right {
+          float: right;
+          margin-right: 25px;
+        }
+
+        .header-right a {
+          line-height: 65px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+        }
+
+        .header-right a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        label #buka, label #tutup {
+            color: antiquewhite;
+            font-size: 40px;
+            float: right;
+            margin: 0 30px;
+            line-height: 65px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check {
+            display: none;
+        }
+
+        .Roti {
+            background-image: url(Roti/Roti\ bagel.jpg);
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            height: 500px;
+            width: 100%;
+            position: relative;
+          }
+ 
+        h1 {
+          position: absolute;
+          margin: 240px 350px;
+          font-size: 45px;
+          text-shadow: 4px 4px #000000;
+        }
+        
+        .Roti a{
+          /* background-color: goldenrod; */
+          background-color: #3C344C;
+          line-height: 200px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: right;
+        }
+
+        .Kue-Kering {
+            background-image: url(Kue-Kering/kue\ biji\ ketapang.jpg);
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+          
+        .Kue-Kering a{
+          background-color: #3C344C;
+          line-height: 200px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: right;
+        }
+
+        .Kue{
+            background-image: url(Kue/Cheese\ Cake.jpeg);
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+
+        .Kue a{
+          background-color: #3C344C;
+          line-height: 200px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: right;
+        }
+
+        .Custom{
+            text-align: center;
+            height: 450px;
+            width: 100%;
+            position: relative;
+        }
+
+        .Custom a{
+          background-color: #3C344C;
+          line-height: 450px;
+          width: 100%;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: right;
+        }
+
+        .Custom p{
+          color: #ffffff;
+          position: absolute;
+          margin: 290px 450px 180px 420px;
+          font-size: 20px;
+          text-shadow: 1px 1px #000000;
+
+        }
+
+        .Custom h2{
+          font-size: 45px;
+          text-shadow: 3px 3px #000000;
+        }
+
+        @media (max-width: 992px) {  
+          label #buka {
+              display: block;
+          }
+        
+          .header-right {
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              margin-right: 0;
+              right: -100%;
+              top: 65px;
+              background-color: rgba(34, 49, 52, 0.7);
+              /* background-color: rgb(240, 246, 247, .8); */
+              text-align: center;
+              transition: .5s;
+          }
+        
+          .header-right a {
+              width: 100%;
+              display: block;
+              line-height: 30px;
+              padding: 20px 0;
+          }
+        
+          #check:checked ~ .header-right {
+              right: 0;
+          }
+        
+          #check:checked ~ label #buka {
+              display: none;
+          }
+        
+          #check:checked ~ label #tutup {
+              display: block;
+          }
+
+          .Custom p{
+            margin: 290px 50px 180px 50px;
+          }
+        }
+          
+        @media (max-width: 800px) {
+          h1{
+            margin-left: 100px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+      <div class="container">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="material-icons" id="buka">subject</i>
+            <i class="material-icons" id="tutup">close</i>
+        </label>
+        <div class="header-left"> <i class="fa fa-cake-candles"></i> Golden Flour </div>
+        <div class="header-right">
+          <a href="..\index.html">Home</a>
+          <a href="..\About\About.html">About</a>
+          <a href="Product.html">Product</a>
+          <a href="..\Our Team\Teams.html">Our Team</a>
+          <a href="..\Contact\Contact.html">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+        <div class="Products">
+
+            <div class="Roti">
+              <h1>Bread</h1>
+              <a href="Roti.html">Selengkapnya</a>
+            </div>
+
+            <div class="Kue-Kering">
+              <h1>Kue Kering</h1>
+              <a href="Kue_Kering.html">Selengkapnya</a>
+            </div>
+
+            <div class="Kue">
+              <h1>Kue</h1>
+              <a href="Kue.html">Selengkapnya</a>
+            </div>
+
+            <div class="Custom"> 
+              <a href="..\Contact\Contact.html"><h2>Custom</h2></a>
+              <p>Untuk berapa banyak Pesanan/Custom motif Cake silahkan Kontak kami atau klik disini</p>
+            </div>
+
+        </div>
+
+</body>
+</html>

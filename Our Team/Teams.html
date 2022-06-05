@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Golden Flour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #494949;
+        }
+        
+        a {
+          text-decoration: none;
+        }
+            
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+        
+        header {
+          height: 65px;
+          width: 100%;
+          background-color: rgba(34, 49, 52, 0.7);
+          position :fixed;
+          top: 0;
+          z-index: 10;
+        }
+        
+        .fa-cake-candles {
+          color: #ffffff;
+          padding: 0 10px;
+        }
+
+        .header-left {
+          float: left;
+          line-height: 65px;
+          font-size: 25px;
+          font-weight: bolder;
+          padding-left: 10px;
+          color: #ffd700;
+        }
+        
+        .header-right {
+          float: right;
+          margin-right: 25px;
+        }
+        
+        .header-right a {
+          line-height: 65px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+        }
+        
+        .header-right a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        label #buka, label #tutup {
+            color: antiquewhite;
+            font-size: 40px;
+            float: right;
+            margin: 0 30px;
+            line-height: 65px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check {
+            display: none;
+        }
+
+        .Team-wrapper {
+            text-align: center;
+        }
+
+        .heading {
+            padding-top: 60px;
+            padding-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .heading h2 {
+            font-weight: normal;
+            font-size: 35px;
+            /* border-bottom: 3px solid;
+            border-color: #ffd700; */
+        }
+
+        hr {
+          box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.7);
+          border: none;
+          color: #1f1f1f;
+          width: 100%;
+          background-color: #ffd700;
+          height: 4px;
+        }
+
+        .Team {
+            float: left;
+            width: 25%;
+        }
+
+        .txt-contents {
+            width: 80%;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 17px;
+            color: #ffffff;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+
+        @media (max-width: 992px) {
+            .Team {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+
+            label #buka {
+                display: block;
+            }
+        
+            .header-right {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                margin-right: 0;
+                right: -100%;
+                top: 65px;
+                background-color: rgba(34, 49, 52, 0.7);
+                /* background-color: rgb(240, 246, 247, .8); */
+                text-align: center;
+                transition: .5s;
+            }
+        
+            .header-right a {
+                width: 100%;
+                display: block;
+                line-height: 30px;
+                padding: 20px 0;
+            }
+        
+            #check:checked ~ .header-right {
+                right: 0;
+            }
+
+            #check:checked ~ label #buka {
+                display: none;
+            }
+
+            #check:checked ~ label #tutup {
+                display: block;
+            }
+                }
+
+        @media (max-width: 600px) {
+            .Team {
+                float: left;
+                width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+      <div class="container">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="material-icons" id="buka">subject</i>
+            <i class="material-icons" id="tutup">close</i>
+        </label>
+            <div class="header-left"> <i class="fa fa-cake-candles"></i> Golden Flour </div>
+            <div class="header-right">
+                  <a href="..\index.html">Home</a>
+                  <a href="..\About\About.html">About</a>
+                  <a href="..\Product\Product.html">Product</a>
+                  <a href="Teams.html">Our Team</a>
+                  <a href="../Contact/Contact.html">Contact us</a>
+            </div>
+      </div>
+    </header>
+
+    <div class="Team-wrapper">
+
+        <div class="container">
+          
+          <div class="heading">
+            <h2>Team Kami</h2>
+            <hr>
+          </div>
+
+          <div class="Teams">
+
+            <div class="Team">
+              <div class="Team-icon">
+                <img src="Diaz.png">
+              </div>
+              <div class="txt-contents">
+                <p>Diaz Aditya Yudha</p>
+                <p>Nim : 19210618</p>
+              </div>
+            </div>
+
+            <div class="Team">
+              <div class="Team-icon">
+                <img src="Aldiansyah.png">
+              </div>
+              <div class="txt-contents">
+                <p>Aldiansyah Kusuma</p>
+                <p>Nim: 19210676</p>
+              </div>
+            </div>
+
+            <div class="Team">
+              <div class="Team-icon">
+                <img src="Dimas.png">
+              </div>
+              <div class="txt-contents">
+                <p>Dimas Pungky Eprianza</p>
+                <p>Nim : 19210719</p>
+              </div>
+            </div>
+
+            <div class="Team">
+              <div class="Team-icon">
+                <img src="Satria.png">
+              </div>
+              <div class="txt-contents">
+                <p>Satria Bayu Agustian</p>
+                <p>Nim : 19210622</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+</body>
+</html>

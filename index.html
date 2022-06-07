@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
+             background-color: rgb(34, 49, 52);
         }
         
         a {
@@ -33,7 +34,7 @@
         header {
           height: 65px;
           width: 100%;
-          background-color: rgba(34, 49, 52, 0.3);
+          background-color: rgba(34, 49, 52, 0.7);
           position :fixed;
           top: 0;
           z-index: 10;
@@ -98,7 +99,7 @@
 
         .gmb img {
           width: 100%;
-          height: 670px;
+          height: 650px;
         }
 
         .gmb h2 {
@@ -138,8 +139,8 @@
 
         .Product-favorit {
           width: 100%;
-          height: 660px;
-          background-color: rgb(34, 49, 52);
+          display: flex;
+          height: auto;
         }
         
         .heading h2 {
@@ -155,20 +156,16 @@
           box-shadow: 5px 5px #c5c5c5;
           text-align: center;
           float: left;
-          margin-top: 50px;
-          margin-right: 30px;
+          flex: auto;
+          margin: 50px 30px 0 30px;
           height: 400px;
           background-color: #ffd700;
-          width: 30%;
         }
 
         .Fav-icon img {
-          /* margin-top: 20px; */
           height: 200px;
           width: 100%;
           border-radius: 40px 10px;
-          /* border: 4px solid white; */
-          /* box-shadow: 3px 5px 10px 3px rgba(252, 248, 252, 0.9); */
         }
 
         .Product-favorit p {
@@ -210,8 +207,7 @@
                 margin-right: 0;
                 right: -100%;
                 top: 65px;
-                background-color: rgba(34, 49, 52, 0.1);
-                /* background-color: rgb(240, 246, 247, .8); */
+                background-color: rgba(34, 49, 52, 0.7);
                 text-align: center;
                 transition: .5s;
             }
@@ -245,19 +241,9 @@
 
             .Fav {
               margin-left: 10px;
-              width: 45%;
-              align-items: center;
             }
 
         }
-
-        @media (max-width: 850px) {
-          .Product-favorit {
-              height: 1600px;
-            }
-        }
-
-
 
         @media (max-width: 600px) {
           .gmb h2 {
@@ -277,10 +263,80 @@
           }
         }
 
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+
+          .Banner {
+            height: auto;
+          }
+
+          
+          .gmb img {
+            height: auto;
+          }
+          
+          .gmb h2 { 
+            font-size: smaller;
+            padding-left: 30px;
+            top: 55px;
+          }
+
+          .gmb p {
+            padding-left: 30px;
+            font-size: 8px;
+            top: 78px;
+          }
+          
+          
+          .gmb a {
+            font-size: 8px;
+            top: 120px;       
+            padding: 8px 15px;
+            margin-left: 30px;
+          }
+
+          .Product-favorit {
+            height: auto;
+          }
+          
+          .heading h2 {
+            padding-top: 30px;
+            font-size: x-large;
+          }
+
+          .Fav {
+            height: 250px;
+            width: auto;
+            border-radius: 40px 0;
+          }
+
+          .Fav-icon img {
+            height: 100px;
+            border-radius: 40px 0;
+          }
+
+          .konten {
+            margin-top: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
+
+          .order {
+            padding: 10px 15px;
+          }
+        }
+
     </style>
   </head>
   
-  <body>
+  <body onload="message()">
 
     <header>
         <div class="container">
@@ -290,7 +346,7 @@
               <i class="material-icons" id="tutup">close</i>
           </label>
           <div class="header-left"> <i class="fa fa-cake-candles"></i> Golden Flour </div>
-          <div class=" btn btn-primary header-right">
+          <div class="header-right">
             <a href="index.html">Home</a>
             <a href="About\About.html">About</a>
             <a href="Product\Product.html">Product</a>
@@ -303,7 +359,7 @@
 
     <div class="Banner">
       <div class="gmb">
-        <img src="Banner.jpg" alt="Banner Produk">
+        <img src="Banner.jpg" alt="Banner Kue">
         <h2>Golden Flour</h2>
         <p>Welcome to Golden flour many flavours to make your day <span>Golden.</span> </p>
         <a href="Product/Product.html" class="fa fa-cart-shopping"> Shop Now </a>
@@ -312,10 +368,11 @@
 
     <div class="Product-favorit">
       <div class="container">
-
+        
         <div class="heading">
           <h2>Produk Favorit</h2>
         </div>
+
         
         <div class="Fav">
           <div class="Fav-icon">
@@ -326,7 +383,7 @@
           </div>
           <div class="konten">
             <p>IDR 75K</p>
-            <span class="order">Buy Now</span>
+            <span class="order" onclick="order()">Buy Now</span>
           </div>
         </div>
         
@@ -339,7 +396,7 @@
           </div>
           <div class="konten">
             <p>IDR 240K</p>
-            <span class="order">Buy Now</span>
+            <span class="order" onclick="order()">Buy Now</span>
           </div>
         </div>
         
@@ -352,12 +409,22 @@
           </div>
           <div class="konten">
             <p>IDR 30K</p>
-            <span class="order">Buy Now</span>
+            <span class="order" onclick="order()">Buy Now</span>
           </div>
         </div>
 
       </div>
     </div>
+
+    <script type="text/javascript">
+			function message(){
+				alert("Selamat Datang")
+			}
+
+      function order(){
+        alert('Maaf Untuk Saat ini Pembelian tidak dapat dilakukan') 
+      }
+		</script>
 
     
   </body>

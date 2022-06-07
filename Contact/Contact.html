@@ -1,265 +1,261 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Golden Flour</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../fontawesome/css/all.css">
-    
-    <style>
+<head>
+  <title>Golden Flour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  
+  <style>
       *{
         box-sizing: border-box;
       }
       
       body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        a {
-          text-decoration: none;
-        }
-            
-        .container {
-          max-width: 1170px;
-          width: 100%;
-          padding: 0 15px;
-          margin: 0 auto;
-        }
-        
-        header {
-          height: 65px;
-          width: 100%;
-          background-color: rgba(34, 49, 52, 0.9);
-          position :fixed;
-          top: 0;
-          z-index: 10;
-        }
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
 
-        /* .fa {
-          
-        } */
+      a {
+        text-decoration: none;
+      }
 
-        .fa-cake-candles {
-          color: aliceblue;
-          padding: 0 10px;
-        }
-        
-        .header-left {
-          float: left;
-          line-height: 65px;
-          font-size: 25px;
-          font-weight: bolder;
-          color: #ffd700;
+      .container {
+        max-width: 1170px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+
+      header {
+        height: 65px;
+        width: 100%;
+        background-color: rgba(34, 49, 52, 0.7);
+        position :fixed;
+        top: 0;
+        z-index: 10;
+      }
+
+      .fa-cake-candles {
+        color: #ffffff;
+        padding: 0 10px;
+      }
+      
+      .header-left {
+        float: left;
+        line-height: 65px;
+        font-size: 25px;
+        font-weight: bolder;
+        padding-left: 10px;
+        color: #ffd700;
+      }
+      
+      .header-right {
+        float: right;
+        margin-right: 25px;
+      }
+      
+      .header-right a {
+        line-height: 65px;
+        padding: 0 25px;
+        color: white;
+        display: block;
+        float: left;
+        transition: all 0.5s;
+      }
+      
+      .header-right a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      
+      label #buka, label #tutup {
+        color: antiquewhite;
+        font-size: 40px;
+        float: right;
+        margin: 0 30px;
+        line-height: 65px;
+        cursor: pointer;
+        display: none;
+      }
+  
+      #check {
+        display: none;
+      }
+
+     .heading {
+        margin-top: 95px;
+      }
+      
+      .heading h2 {
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 2px 2px #3d3d3d;
+      }
+      
+      hr {
+        box-shadow: 0 3px 5px 0 rgba(255, 0, 255, 0.7);
+        border: none;
+        color: #1f1f1f;
+        width: 450px;
+        background-color: #1f1f1f;
+        height: 4px;
+      }
+
+      .content-left {
+        float: left;
+        margin-top: 30px;
+        width: 50%;
+        text-align: center;
+      }
+      
+      input,textarea {
+        color: white;
+        height: 30px;
+        width: 350px;
+        background-color: #1f1f1f;
+        border-radius: 10px;
+        box-shadow: 0 0 8px magenta;
+      }
+
+      textarea {
+        height: 50px;
+      }
+
+      input[type="text"],textarea:focus {
+        outline: none;
+      }
+     
+      p {
+        margin-bottom: 3px;
+        padding: 0 280px 0 0; 
+        font-weight: bold;
+      }
+
+      #Submit,#Reset {
+        margin: 30px 0 0 10px;
+        border-radius: 10px;
+        background-color: rgb(1, 226, 31);
+        width: 70px;
+        height: 50px;
+        padding: 10px;
+        box-shadow: 0px 6px rgb(19, 151, 7);
+        border: none;
+      }
+
+      #Reset {
+        background-color: rgb(255, 0, 0);
+        box-shadow: 0px 6px rgb(170, 2, 2);
+      }
+
+      #Submit:active {
+        position: relative;
+        top: 6px;
+        box-shadow: none;
+      }
+
+      #Reset:active {
+        position: relative;
+        top: 6px;
+        box-shadow: none;
+      } 
+
+      .content-right {
+        float: right;
+        margin-top: 30px;
+        padding: 0 50px;
+        width: 50%;
+      }
+
+      .content-right h2 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      
+      .icons {
+        width: 100%;
+        padding-bottom: 50px;
+        display: inline-block;
+      }
+
+      .sosmed {
+        margin: 0;
+        float: left;
+      }
+
+      .konten p {
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 15px;
+        color: #1f1f1f;
+      }
+
+      @media (max-width: 992px) {
+        label #buka {
+          display: block;
         }
         
         .header-right {
-          float: right;
-          margin-right: 25px;
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          margin-right: 0;
+          right: -100%;
+          top: 65px;
+          background-color: rgba(34, 49, 52, 0.7);
+          text-align: center;
+          transition: .5s;
         }
         
         .header-right a {
-          line-height: 65px;
-          padding: 0 25px;
-          color: white;
+          width: 100%;
           display: block;
-          float: left;
-          transition: all 0.5s;
+          line-height: 30px;
+          padding: 20px 0;
         }
         
-        .header-right a:hover {
-          background-color: rgba(255, 255, 255, 0.3);
+        #check:checked ~ .header-right {
+              right: 0;
         }
 
-        label #buka, label #tutup {
-            color: antiquewhite;
-            font-size: 40px;
-            float: right;
-            margin: 0 30px;
-            line-height: 65px;
-            cursor: pointer;
-            display: none;
-
+        #check:checked ~ label #buka {
+          display: none;
         }
 
-        #check {
-            display: none;
-        }
-
-        .heading {
-          margin-top: 95px;
-          /* border-bottom: solid #1f1f1f; */
-        }
-        
-        .heading h2 {
-          text-align: center;
-          font-size: 40px;
-          text-shadow: 2px 2px #3d3d3d;
-        }
-        
-        hr {
-          box-shadow: 0 3px 5px 0 rgba(255, 0, 255, 0.7);
-          border: none;
-          color: #1f1f1f;
-          width: 450px;
-          background-color: #1f1f1f;
-          height: 4px;
+        #check:checked ~ label #tutup {
+          display: block;
         }
 
         .content-left {
-          float: left;
-          margin-top: 30px;
-          width: 50%;
-          text-align: center;
-          /* background-color: #ffd700; */
+          width: 100%;
+          margin-bottom: 70px;
         }
-        
-        input,textarea {
-          /* background-color: rgb(29, 28, 28); */
-          color: white;
-          height: 30px;
-          width: 350px;
-          background-color: #1f1f1f;
-          border-radius: 10px;
-          box-shadow: 0 0 8px magenta;
-        }
-
-        textarea {
-          height: 50px;
-        }
-
-        input[type="text"],textarea:focus {
-            outline: none;
-        }
-       
-
-        p {
-          /* position: relative;
-          margin-left: 110px; */
-          /* text-align: left; */
-          margin-bottom: 3px;
-          padding: 0 280px 0 0; 
-          font-weight: bold;
-        }
-
-        #Submit,#Reset {
-          margin: 30px 0 0 10px;
-          border-radius: 10px;
-          background-color: rgb(1, 226, 31);
-          width: 70px;
-          height: 50px;
-          padding: 10px;
-          box-shadow: 0px 6px rgb(19, 151, 7);
-          border: none;
-        }
-
-        #Reset {
-          background-color: rgb(255, 0, 0);
-          box-shadow: 0px 6px rgb(170, 2, 2);
-        }
-
-        #Submit:active {
-          position: relative;
-          top: 6px;
-          box-shadow: none;
-        }
-
-        #Reset:active {
-          position: relative;
-          top: 6px;
-          box-shadow: none;
-        } 
 
         .content-right {
-          float: right;
-          margin-top: 30px;
-          padding: 0 50px;
-          width: 50%;
-          /* background-color: #ffd700; */
-        }
-
-        .content-right h2 {
-          text-align: center;
-          font-size: 25px;
-          margin-bottom: 20px;
-        }
-        
-
-        .icons {
           width: 100%;
-          padding-bottom: 50px;
-          display: inline-block;
         }
 
-        .sosmed {
-          margin: 0;
-          float: left;
+      }
+
+
+      @media (max-width: 425px){
+        label #buka, label #tutup {
+          margin-right: 0;
         }
+      }
 
-        .konten p {
-          margin-left: 20px;
-          font-weight: bold;
-          font-size: 15px;
-          color: #1f1f1f;
+
+      @media (max-width: 320px) {
+        .header-left {
+          font-size: 20px;
         }
+      }
 
-        @media (max-width: 992px) {
-
-            label #buka {
-                display: block;
-            }
-        
-            .header-right {
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                margin-right: 0;
-                right: -100%;
-                top: 65px;
-                background-color: rgba(34, 49, 52, 0.9);
-                /* background-color: rgb(240, 246, 247, .8); */
-                text-align: center;
-                transition: .5s;
-            }
-        
-            .header-right a {
-                width: 100%;
-                display: block;
-                line-height: 30px;
-                padding: 20px 0;
-            }
-        
-            #check:checked ~ .header-right {
-                right: 0;
-            }
-
-            #check:checked ~ label #buka {
-                display: none;
-            }
-
-            #check:checked ~ label #tutup {
-                display: block;
-            }
-
-            .content-left {
-              width: 100%;
-              margin-bottom: 70px;
-            }
-
-            .content-right {
-              width: 100%;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-        }
-
-    </style>
-  </head>
+   </style>
+</head>
   
   <body>
 
@@ -283,12 +279,6 @@
         </div>
     </header>
 
-      <!-- <div class="logo"><i class="fa fa-desktop"></i></div> -->
-      <!-- <div class="icon"><i class="fa fa-desktop"></i></div>
-      <div class="icon"><i class="fa fa-brands fa-whatsapp"></i></div>
-      <div class="icon"><i class="fa fa-birthday-cake"></i></div>
-      <div class="icon"><i class="fa fa-bus"></i></div> -->
-
       <div class="container">
         <div class="heading">
           <h2>Contact us</h2>
@@ -296,8 +286,7 @@
         </div>
 
         <div class="content-left">
-          <form>
-            
+          <form>          
             <p>Nama</p>
             <input name="Nama" type="text" placeholder="  Your Name">
             
@@ -311,11 +300,7 @@
             <textarea name="Alamat" cols="50" rows="3"></textarea>
 
             <p>Pesan</p>
-            <textarea name="Pesan cols="50" rows="3"></textarea><br>
-
-            <!-- <td style="background-color: #383838;"><p>Alamat</p></td> -->
-            <!-- Alamat -->
-            <!-- <td style="background-color: #1f1f1f;"><textarea name="Alamat" cols="50" rows="3"></textarea></td> -->
+            <textarea name="Pesan" cols="50" rows="3"></textarea><br>
 
             <input type="submit" value="Submit" id="Submit">    
             <input type="reset" value="Reset" id="Reset">    
@@ -357,5 +342,5 @@
       </div>
 
 
-  </body>
+</body>
 </html>

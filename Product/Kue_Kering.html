@@ -139,21 +139,6 @@
           top: 6px;
           box-shadow: none;
         } 
-
-
-
-
-
-
-        
-        /* img {
-          margin: 10px 10px;
-          width: 600px;
-          height: 300px;
-          border-radius: 20px;
-          
-        } */
-        
         
         @media (max-width: 1050px) {
 
@@ -208,15 +193,17 @@
 
         }
           
-        @media (max-width: 950px) {
-          /* img {
-            width: 300px;
-            height: 150px;
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
           }
+        }
 
-          p,h2 {
-            color: antiquewhite;
-          } */
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
         }
 
     </style>
@@ -241,9 +228,6 @@
         </div>
     </header>
 
-        <!-- <div class="Products"> -->
-
-
             <div class="Products">
               <div class="produk">
                 <div class="prd icon" align="center">
@@ -255,7 +239,7 @@
                 </div>
                 <div class="prd pesan" align="center">
                   <p>IDR 42.5K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
 
@@ -271,7 +255,7 @@
                 
                 <div class="prd pesan" align="center">
                   <p>IDR 45K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
               
@@ -287,7 +271,7 @@
                 
                 <div class="prd pesan" align="center">
                   <p>IDR 75K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
               
@@ -303,7 +287,7 @@
                 
                 <div class="prd pesan" align="center">
                   <p>IDR 55K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
               
@@ -319,7 +303,7 @@
                 
                 <div class="prd pesan" align="center">
                   <p>IDR 55K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
               
@@ -335,10 +319,16 @@
                 
                 <div class="prd pesan" align="center">
                   <p>IDR 25K</p>
-                  <span class="order"> Order </span>
+                  <span class="order" onclick="order()"> Order </span>
                 </div>
               </div>
             </div>
+
+            <script>
+              function order(){
+                alert('Maaf Untuk Saat ini Pembelian tidak dapat dilakukan') 
+              }
+            </script>
 
 </body>
 </html>

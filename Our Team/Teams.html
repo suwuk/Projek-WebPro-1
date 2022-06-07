@@ -99,8 +99,6 @@
         .heading h2 {
             font-weight: normal;
             font-size: 35px;
-            /* border-bottom: 3px solid;
-            border-color: #ffd700; */
         }
 
         hr {
@@ -150,7 +148,6 @@
                 right: -100%;
                 top: 65px;
                 background-color: rgba(34, 49, 52, 0.7);
-                /* background-color: rgb(240, 246, 247, .8); */
                 text-align: center;
                 transition: .5s;
             }
@@ -180,6 +177,19 @@
                 float: left;
                 width: 100%;
             }
+        }
+
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
         }
 
         

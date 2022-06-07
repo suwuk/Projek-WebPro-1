@@ -86,16 +86,6 @@
             display: none;
         }
 
-        .Roti {
-            background-image: url(Roti/Roti\ bagel.jpg);
-            background-size: cover;
-            color: #ffffff;
-            text-align: center;
-            height: 500px;
-            width: 100%;
-            position: relative;
-          }
- 
         h1 {
           position: absolute;
           margin: 240px 350px;
@@ -103,8 +93,7 @@
           text-shadow: 4px 4px #000000;
         }
         
-        .Roti a{
-          /* background-color: goldenrod; */
+        .Roti a,.Kue-Kering a,.Kue a{
           background-color: #3C344C;
           line-height: 200px;
           padding: 0 25px;
@@ -112,53 +101,36 @@
           display: block;
           float: right;
         }
+
+        .Produk {
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+
+        .Roti {
+            background-image: url(Roti/Roti\ bagel.jpg);    
+          }
 
         .Kue-Kering {
             background-image: url(Kue-Kering/kue\ biji\ ketapang.jpg);
-            background-size: cover;
-            color: #ffffff;
-            text-align: center;
-            height: 500px;
-            width: 100%;
-            position: relative;
-        }
-          
-        .Kue-Kering a{
-          background-color: #3C344C;
-          line-height: 200px;
-          padding: 0 25px;
-          color: white;
-          display: block;
-          float: right;
         }
 
-        .Kue{
+        .Kue {
             background-image: url(Kue/Cheese\ Cake.jpeg);
-            background-size: cover;
-            color: #ffffff;
-            text-align: center;
-            height: 500px;
-            width: 100%;
-            position: relative;
         }
 
-        .Kue a{
-          background-color: #3C344C;
-          line-height: 200px;
-          padding: 0 25px;
-          color: white;
-          display: block;
-          float: right;
-        }
-
-        .Custom{
+        .Custom {
             text-align: center;
             height: 450px;
             width: 100%;
             position: relative;
         }
 
-        .Custom a{
+        .Custom a {
           background-color: #3C344C;
           line-height: 450px;
           width: 100%;
@@ -195,7 +167,6 @@
               right: -100%;
               top: 65px;
               background-color: rgba(34, 49, 52, 0.7);
-              /* background-color: rgb(240, 246, 247, .8); */
               text-align: center;
               transition: .5s;
           }
@@ -230,6 +201,19 @@
           }
         }
 
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
+        }
+
     </style>
 </head>
 <body>
@@ -254,17 +238,17 @@
 
         <div class="Products">
 
-            <div class="Roti">
+            <div class="Produk Roti">
               <h1>Bread</h1>
               <a href="Roti.html">Selengkapnya</a>
             </div>
 
-            <div class="Kue-Kering">
+            <div class="Produk Kue-Kering">
               <h1>Kue Kering</h1>
               <a href="Kue_Kering.html">Selengkapnya</a>
             </div>
 
-            <div class="Kue">
+            <div class="Produk Kue">
               <h1>Kue</h1>
               <a href="Kue.html">Selengkapnya</a>
             </div>

@@ -1,0 +1,406 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+       background-color: rgb(34, 49, 52);
+}
+
+a {
+  text-decoration: none;
+}
+    
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.7);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.fa-cake-candles {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.header-left {
+  float: left;
+  line-height: 65px;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-left: 10px;
+  color: #ffd700;
+}
+
+.header-right {
+  float: right;
+  margin-right: 25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+label #buka, label #tutup {
+    color: antiquewhite;
+    font-size: 40px;
+    float: right;
+    margin: 0 30px;
+    line-height: 65px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#check {
+    display: none;
+}
+
+/* Home */
+.Banner {
+  height: 650px;
+}
+
+.gmb {
+  position: relative;
+  color: rgb(189, 184, 184);
+}
+
+.gmb img {
+  width: 100%;
+  height: 650px;
+}
+
+.gmb h2 {
+  padding-left: 50px;
+  position: absolute;
+  top: 75px;
+}
+
+.gmb p {
+  padding-left: 50px;
+  position: absolute;
+  top: 120px;
+  width: 30%;
+}
+
+.gmb p span {
+  color: #ffd700;
+}
+
+.gmb a {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  color: #4e4e4e;
+  background-image: linear-gradient(to right, #4682B4, #00FFFF, #00FA9A);
+  padding: 10px 20px;
+  margin-left: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 3px #4e4e4e;
+  letter-spacing: 1.5px;
+}
+
+.fa-cart-shopping {
+  font-size: 13px;
+}
+
+.Product-favorit {
+  width: 100%;
+  display: flex;
+  height: auto;
+  padding-bottom: 100px;
+}
+
+.heading {
+  text-align: center;
+  margin: 0;
+  height: 180px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.heading h2 {
+  font-weight: normal;
+  box-shadow: 0 3px 5px 0 rgba(255, 0, 255, 0.7); 
+  border: 4px groove #d4d4d4;
+}
+
+.Fav {
+  border-radius: 40px 10px;
+  box-shadow: 5px 5px #c5c5c5;
+  text-align: center;
+  float: left;
+  flex: auto;
+  margin: -40px 30px 100px 30px;
+  height: 400px;
+  background-color: #ffd700;
+}
+
+.Fav-icon img {
+  height: 200px;
+  width: 100%;
+  border-radius: 40px 10px;
+}
+
+.Product-favorit p {
+  font-weight: bold;
+}
+
+.konten-fav-home {
+  margin-top: 50px;
+  padding: 0 10px;
+  float: left;
+  width: 50%;
+}
+
+.order {
+  background-color: rgb(81, 204, 44);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px #049c1d;
+  font-weight: bolder;
+}
+
+.order:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+} 
+
+/* About */
+.Top {
+    background-image: url(About/Kayu2.png);
+    background-size: cover;
+    color: #e2e0df;
+    text-align: center;
+    padding: 200px 150px;
+    height: auto;
+    
+}
+
+.Top h1 {
+    margin: 0;
+    font-size: 55px;
+    padding-bottom: 20px;
+    text-shadow: 5px 7px #000000; 
+}
+
+.Top p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Product */
+.Products h1 {
+  position: absolute;
+  margin: 240px 350px;
+  font-size: 45px;
+  text-shadow: 4px 4px #000000;
+}
+
+.Roti a,.Kue-Kering a,.Kue a{
+  background-color: #3C344C;
+  line-height: 200px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: right;
+}
+
+.Produk {
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.Roti {
+    background-image: url(Product/Roti/Roti\ bagel.jpg);    
+  }
+
+.Kue-Kering {
+    background-image: url(Product/Kue-Kering/kue\ biji\ ketapang.jpg);
+}
+
+.Kue {
+    background-image: url(Product/Kue/Cheese\ Cake.jpeg);
+}
+
+.Custom {
+    text-align: center;
+    height: 450px;
+    margin-bottom: 150px;
+    /* width: 100%; */
+    position: relative;
+}
+
+.Custom a {
+  background-color: #3C344C;
+  line-height: 450px;
+  width: 100%;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: right;
+}
+
+.Custom p{
+  color: #ffffff;
+  position: absolute;
+  margin: 290px 450px 180px 420px;
+  font-size: 20px;
+  text-shadow: 1px 1px #000000;
+}
+
+.Custom h2{
+  font-size: 45px;
+  text-shadow: 3px 3px #000000;
+}
+
+/* Our Team */
+.Team-content {
+  width: 100%;
+  text-align: center;
+  height: 550px;
+}
+
+.Team {
+    float: left;
+    width: 25%;
+}
+
+.txt-contents {
+    width: 80%;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.Team-icon img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+
+/* contact */
+.Contact {
+  height: auto;
+}
+
+.content-left {
+  float: left;
+  margin-top: 30px;
+  width: 50%;
+  text-align: center;
+}
+
+input,textarea {
+  color: white;
+  height: 30px;
+  width: 350px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 0 8px magenta;
+}
+
+textarea {
+  height: 50px;
+}
+
+input[type="text"],textarea:focus {
+  outline: none;
+}
+
+.Contact p {
+  color: #b4b4b4;
+  margin-bottom: 3px;
+  padding: 0 280px 0 0; 
+  font-weight: bold;
+}
+
+#Submit,#Reset {
+  margin: 30px 0 0 10px;
+  border-radius: 10px;
+  background-color: rgb(1, 226, 31);
+  width: 70px;
+  height: 50px;
+  padding: 10px;
+  box-shadow: 0px 6px rgb(19, 151, 7);
+  border: none;
+}
+
+#Reset {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 6px rgb(170, 2, 2);
+}
+
+#Submit:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+}
+
+#Reset:active {
+  position: relative;
+  top: 6px;
+  box-shadow: none;
+} 
+
+.content-right {
+  float: right;
+  margin-top: 30px;
+  padding: 0 50px;
+  width: 50%;
+  color: #ffffff;
+}
+
+.content-right h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.icons {
+  width: 100%;
+  padding-bottom: 50px;
+  display: inline-block;
+}
+
+.sosmed {
+  margin: 0;
+  float: left;
+}
+
+.icons p {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+

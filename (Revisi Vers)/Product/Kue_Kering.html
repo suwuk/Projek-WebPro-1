@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Golden Flour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  
+  <style>
+        *{
+          box-sizing: border-box;
+        }
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #3C344C;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+
+        header {
+          height: 65px;
+          width: 100%;
+          background-color: rgba(34, 49, 52, 0.9);
+          position :fixed;
+          top: 0;
+          z-index: 10;
+        }
+
+        .header-left {
+          float: left;
+          line-height: 65px;
+          font-size: 25px;
+          font-weight: bolder;
+          padding-left: 10px;
+          color: #ffd700;
+        }
+
+        .header-right {
+          float: right;
+          margin-right: 25px;
+        }
+
+        .header-right a {
+          line-height: 65px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+        }
+
+        .header-right a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        label #buka, label #tutup {
+            color: antiquewhite;
+            font-size: 40px;
+            float: right;
+            margin: 0 30px;
+            line-height: 65px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check {
+            display: none;
+        }
+
+        .Products {
+            margin-top: 60px;
+        }
+
+        .produk {
+          margin-top: 50px ;
+          display: inline-block;
+        }
+
+        .prd {
+          float: left;
+        }
+
+        .prd img{
+          width: 550px;
+          height: 300px;
+          border-radius: 20px;
+        }
+
+        .icon {
+          width: 45%;
+        }
+
+        .txt-contents {
+          width: 35%;
+        }
+
+        .txt-contents p {
+          margin: 0 50px;
+        }
+
+        .pesan {
+          color: white;
+          width: 20%;
+        }
+
+        .pesan p{
+          color: white;
+          font-weight: bold;
+        }
+
+        p,h2 {
+          color: #dbbcac;
+        }
+        
+        .order {
+          background-color: rgb(81, 204, 44);
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          box-shadow: 0 6px #049c1d;
+        }
+        
+        .order:active {
+          position: relative;
+          top: 6px;
+          box-shadow: none;
+        } 
+        
+        @media (max-width: 1050px) {
+
+          label #buka {
+              display: block;
+          }
+
+          .header-right {
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              margin-right: 0;
+              right: -100%;
+              top: 65px;
+              background-color: rgba(34, 49, 52, 0.9);
+              /* background-color: rgb(240, 246, 247, .8); */
+              text-align: center;
+              transition: .5s;
+          }
+
+          .header-right a {
+              width: 100%;
+              display: block;
+              line-height: 30px;
+              padding: 20px 0;
+          }
+
+          #check:checked ~ .header-right {
+              right: 0;
+          }
+
+          #check:checked ~ label #buka {
+              display: none;
+          }
+
+          #check:checked ~ label #tutup {
+              display: block;
+          }
+
+          .prd {
+            text-align: center;
+            width: 100%;
+            float: none;
+          }
+          
+
+          .produk {
+          margin-top: 60px ;
+          display: inline-block;
+          }
+
+
+        }
+          
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class="material-icons" id="buka">subject</i>
+            <i class="material-icons" id="tutup">close</i>
+          </label>
+          <div class="header-left"> Kue Kering </div>
+          <div class="header-right">
+            <a href="..\index.html">Home</a>
+          </div>
+        </div>
+    </header>
+
+            <div class="Products">
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue biji ketapang.jpg" alt="Biji Ketapang">
+                </div>
+                <div class="prd txt-contents" align="center">
+                  <h2>Biji Ketapang</h2>
+                  <p>Kue yang terbuat dari sagu yang diaduk bercampur santan dan gula pasir. Hasil adonan tersebut dimasak dengan cara digoreng. </p>
+                </div>
+                <div class="prd pesan" align="center">
+                  <p>IDR 42.5K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue kastengel.jpg" alt="Kue Kastengel">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Kue Kastengel</h2>
+                  <p>Kue kering yang memiliki adonan utama berupa terigu, telur, margarin dan parutan keju</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 45K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue nastar.jpg" alt="Kue Nastar">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Kue Nastar</h2>
+                  <p>Sejenis kue kering dari adonan tepung terigu, mentega, dan telur yang diisi dengan selai nanas atau cokelat. </p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 75K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue putri salju.jpg" alt="Kue Putri Salju">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Kue Putri Salju</h2>
+                  <p>Sejenis kue kering yang berbentuk bulan sabit dan di atasnya diselimuti dengan gula halus seperti salju, dibuat dari adonan tepung terigu, mentega dan kuning telur yang dipanggang di dalam oven sampai matang dan di atasnya diselimuti dengan gula halus</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 55K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue sagu.jpg" alt="Kue Sagu">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Kue Sagu</h2>
+                  <p>Salah satu kue kering yang biasa disajikan saat lebaran. Kue ini memiliki tekstur gurih dan lumer di mulut.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 55K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue-Kering\kue Tambang.jpg" alt="Kue Tambang">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>kue Tambang</h2>
+                  <p>Kue ini terbuat dari adonan terigu dan bisa terbentuk seperti demikian, karena adonan tersebut ketika masih mentah dibentuk dengan cara dipelintir sehingga mirip dengan tambang.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 25K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function order(){
+                alert('Maaf Untuk Saat ini Pembelian tidak dapat dilakukan') 
+              }
+            </script>
+
+</body>
+</html>

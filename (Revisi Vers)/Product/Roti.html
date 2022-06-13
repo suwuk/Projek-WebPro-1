@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Golden Flour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  
+  <style>
+        *{
+          box-sizing: border-box;
+        }
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #3C344C;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+
+        header {
+          height: 65px;
+          width: 100%;
+          background-color: rgba(34, 49, 52, 0.9);
+          position :fixed;
+          top: 0;
+          z-index: 10;
+        }
+
+        .header-left {
+          float: left;
+          line-height: 65px;
+          font-size: 25px;
+          font-weight: bolder;
+          padding-left: 10px;
+          color: #ffd700;
+        }
+
+        .header-right {
+          float: right;
+          margin-right: 25px;
+        }
+
+        .header-right a {
+          line-height: 65px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+        }
+
+        .header-right a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        label #buka, label #tutup {
+            color: antiquewhite;
+            font-size: 40px;
+            float: right;
+            margin: 0 30px;
+            line-height: 65px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check {
+            display: none;
+        }
+
+        .Products {
+            margin-top: 60px;
+        }
+
+        .produk {
+          margin-top: 50px ;
+          display: inline-block;
+        }
+
+        .prd {
+          float: left;
+        }
+
+        .prd img{
+          width: 550px;
+          height: 300px;
+          border-radius: 20px;
+        }
+
+        .icon {
+          width: 45%;
+        }
+
+        .txt-contents {
+          width: 35%;
+        }
+
+        .txt-contents p {
+          margin: 0 50px;
+        }
+
+        .pesan {
+          color: white;
+          width: 20%;
+        }
+
+        .pesan p{
+          color: white;
+          font-weight: bold;
+        }
+
+        p,h2 {
+          color: #dbbcac;
+        }
+        
+        .order {
+          background-color: rgb(81, 204, 44);
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          box-shadow: 0 6px #049c1d;
+        }
+        
+        .order:active {
+          position: relative;
+          top: 6px;
+          box-shadow: none;
+        } 
+
+        
+        @media (max-width: 1050px) {
+
+          label #buka {
+              display: block;
+          }
+
+          .header-right {
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              margin-right: 0;
+              right: -100%;
+              top: 65px;
+              background-color: rgba(34, 49, 52, 0.9);
+              text-align: center;
+              transition: .5s;
+          }
+
+          .header-right a {
+              width: 100%;
+              display: block;
+              line-height: 30px;
+              padding: 20px 0;
+          }
+
+          #check:checked ~ .header-right {
+              right: 0;
+          }
+
+          #check:checked ~ label #buka {
+              display: none;
+          }
+
+          #check:checked ~ label #tutup {
+              display: block;
+          }
+
+          .prd {
+            text-align: center;
+            width: 100%;
+            float: none;
+          }
+          
+
+          .produk {
+          margin-top: 60px ;
+          display: inline-block;
+          }
+
+
+        }
+          
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class="material-icons" id="buka">subject</i>
+            <i class="material-icons" id="tutup">close</i>
+          </label>
+          <div class="header-left"> Bread </div>
+          <div class="header-right">
+            <a href="..\index.html">Home</a>
+          </div>
+        </div>
+    </header>
+
+            <div class="Products">
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Croissant.jpg" alt="Croissant Brade">
+                </div>
+                <div class="prd txt-contents" align="center">
+                  <h2>Croissant</h2>
+                  <p>Merupakan salah satu pastry yang memiliki tekstur yang renyah dan rasa yang gurih. Teksturnya yang renyah membuat croissant cocok menjadi pendamping teh atau kopi hangat</p>
+                </div>
+                <div class="prd pesan" align="center">
+                  <p>IDR 32K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti bagel.jpg" alt="Bagel Brade">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Bagel</h2>
+                  <p>Merupakan roti khas dari Eropa Timur yang berbentuk seperti donat tapi dalamnya memiliki tekstur lebih padat. Roti ini sangat terkenal di negara Polandia.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 12.5K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti baguette.jpg" alt="Baguette Brade">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Baguette</h2>
+                  <p>Roti yang memiliki bentuk yang panjang mencapai 50 cm, berwarna cokelat, dan bertekstur keras seperti tongkat, sangat cocok dinikmati bersama soup.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 17.5K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti sisir.jpg" alt="Bialy Brade">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Sisir</h2>
+                  <p>Memiliki cita rasa manis dan gurih yang berasal dari mentega yang dioleskan pada setiap sisinya serta tekstur yang sangat lembut.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 21K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti brioche.jpg" alt="BriocheBrade">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Brioche</h2>
+                  <p>Salah satu roti yang cocok dimakan sebagai sarapan maupun camilan. teskturnya yang halus dan bewarna keemasan bisa menjadi salah satu pilihan favorit.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 30K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti Limpa.jpeg" alt="Roti Limpa">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Limpa</h2>
+                  <p>Memiliki rasa yang enak dan wangi ini biasanya diberi rasa dengan gula cair, biji bunga lawang dan kulit jeruk</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 27.5K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Roti\Roti Tawar.jpg" alt="Roti Tawar">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Roti Tawar</h2>
+                  <p>Roti yang memiliki warna putih pekat serta tekstur yang lembut ini mengandung serat, zat besi dan vitamin B cocok dinikmati sebelum beraktivitas.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 16.5K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function order(){
+                alert('Maaf Untuk Saat ini Pembelian tidak dapat dilakukan') 
+              }
+            </script>
+
+</body>
+</html>

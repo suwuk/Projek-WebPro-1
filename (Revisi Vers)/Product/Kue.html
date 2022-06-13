@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Golden Flour</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  
+  <style>
+        *{
+          box-sizing: border-box;
+        }
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #3C344C;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+
+        header {
+          height: 65px;
+          width: 100%;
+          background-color: rgba(34, 49, 52, 0.9);
+          position :fixed;
+          top: 0;
+          z-index: 10;
+        }
+
+        .header-left {
+          float: left;
+          line-height: 65px;
+          font-size: 25px;
+          font-weight: bolder;
+          padding-left: 10px;
+          color: #ffd700;
+        }
+
+        .header-right {
+          float: right;
+          margin-right: 25px;
+        }
+
+        .header-right a {
+          line-height: 65px;
+          padding: 0 25px;
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+        }
+
+        .header-right a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        label #buka, label #tutup {
+            color: antiquewhite;
+            font-size: 40px;
+            float: right;
+            margin: 0 30px;
+            line-height: 65px;
+            cursor: pointer;
+            display: none;
+
+        }
+
+        #check {
+            display: none;
+        }
+
+        .produk {
+          margin-top: 50px ;
+          display: inline-block;
+        }
+
+        .Products {
+            margin-top: 60px;
+        }
+
+        .prd {
+          float: left;
+        }
+
+        .prd img{
+          width: 550px;
+          height: 300px;
+          border-radius: 20px;
+        }
+
+        .icon {
+          width: 45%;
+        }
+
+        .txt-contents {
+          width: 35%;
+        }
+
+        .txt-contents p {
+          margin: 0 50px;
+        }
+
+        .pesan {
+          color: white;
+          width: 20%;
+        }
+
+        .pesan p{
+          color: white;
+          font-weight: bold;
+        }
+
+        p,h2 {
+          color: #dbbcac;
+        }
+        
+        .order {
+          background-color: rgb(81, 204, 44);
+          padding: 10px 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          box-shadow: 0 6px #049c1d;
+        }
+        
+        .order:active {
+          position: relative;
+          top: 6px;
+          box-shadow: none;
+        } 
+        
+        @media (max-width: 1050px) {
+
+          label #buka {
+              display: block;
+          }
+
+          .header-right {
+              position: fixed;
+              width: 100%;
+              height: 100vh;
+              margin-right: 0;
+              right: -100%;
+              top: 65px;
+              background-color: rgba(34, 49, 52, 0.9);
+              text-align: center;
+              transition: .5s;
+          }
+
+          .header-right a {
+              width: 100%;
+              display: block;
+              line-height: 30px;
+              padding: 20px 0;
+          }
+
+          #check:checked ~ .header-right {
+              right: 0;
+          }
+
+          #check:checked ~ label #buka {
+              display: none;
+          }
+
+          #check:checked ~ label #tutup {
+              display: block;
+          }
+
+          .prd {
+            text-align: center;
+            width: 100%;
+            float: none;
+          }
+          
+
+          .produk {
+          margin-top: 60px ;
+          display: inline-block;
+          }
+
+
+        }
+          
+        @media (max-width: 425px){
+          label #buka, label #tutup {
+            margin-right: 0;
+          }
+        }
+
+
+        @media (max-width: 320px) {
+          .header-left {
+            font-size: 20px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class="material-icons" id="buka">subject</i>
+            <i class="material-icons" id="tutup">close</i>
+          </label>
+          <div class="header-left"> Cake </div>
+          <div class="header-right">
+            <a href="..\index.html">Home</a>
+          </div>
+        </div>
+    </header>
+
+            <div class="Products">
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Black Forest.jpg" alt="Black Forest">
+                </div>
+                <div class="prd txt-contents" align="center">
+                  <h2>Black Forest</h2>
+                  <p>Dengan dilaburi rasa cokelat dan dilapisi dengan krim, serutan coklat dan ditambah dengan cherry yang segar siap membuat anda tergiur dengan rasanya</p>
+                </div>
+                <div class="prd pesan" align="center">
+                  <p>IDR 335K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Chantilly Cake.jpg" alt="Chantilly Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Chantilly Cake</h2>
+                  <p>Dengan sajian bertumpuk seperti lapisan bolu,krim frosting, buah yang diaplikasikan menjadi 1 sehingga memiliki cita rasa yang beragam. Cocok dihidangkan bersama keluarga.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 230K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Cheese Cake.jpeg" alt="Cheese Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Cheese Cake</h2>
+                  <p>Disajikan dengan creamcheese dan krim dengan tepi menggunakan biskuit graham yang sangat dicocok untuk pencuci mulut.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 392K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Rainbow Cake.jpeg" alt="Rainbow Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Rainbow Cake</h2>
+                  <p>Dilapasi dengan 7 warna yang berbeda dipadu dengan krim vanilla yang segar, lalu dihujani mesis diatasnya yang cocok dinikmati bareng keluarga.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 275K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Red Velvet Cake.jpeg" alt="Red Velvet Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Red Velvet Cake</h2>
+                  <p>Dicirikan dengan warna khas merah mahoni dan diciptakan berbagai komponen seperti moesse, krim vanilla hingga smoothie menjadikan makanan penutup yang sempurna.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 365K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+              
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Tiramisu Cake.jpg" alt="Tiramisu Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Tiramisu Cake</h2>
+                  <p>Berasal dari negara italia dengan taburan bubuk kakao diatasmya berpadu dengan rasa kopi yang oekat ditambah dengan keju mascarpone yang pasti nya menggugah selera. Cocok dihidangkan bersama teman-teman</p>
+                </div>
+                
+                <div class="prd pesan" align="center">                  
+                  <p>IDR 240K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+
+              <div class="produk">
+                <div class="prd icon" align="center">
+                  <img src="Kue\Vanilla with chocolate cake.jpeg" alt="Vanilla with Chocolate Cake">
+                </div>
+
+                <div class="prd txt-contents" align="center">
+                  <h2>Vanilla with Chocolate Cake</h2>
+                  <p>Digabungkan dengan 2 elemen rasa yang berbeda menjadikan cake ini mempunyai citarasa yang sudah familiar oleh banyak orang dengan taburan cream vanilla dan dilapisi dengan lapisan coklat yang pekat. Cocok sebagai kue ulang tahun.</p>
+                </div>
+                
+                <div class="prd pesan" align="center">
+                  <p>IDR 225K</p>
+                  <span class="order" onclick="order()"> Order </span>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function order(){
+                alert('Maaf Untuk Saat ini Pembelian tidak dapat dilakukan') 
+              }
+            </script>
+
+</body>
+</html>
